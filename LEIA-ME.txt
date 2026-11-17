@@ -1,0 +1,25 @@
+SHARKSMP-AUCTION - PROJETO FONTE
+
+IMPORTANTE: este ZIP contem o codigo-fonte do plugin, ainda nao um .jar compilado. O ambiente de criacao nao possui Maven nem acesso ao repositorio para baixar a API do Paper/Spigot, entao nao foi possivel compilar e testar o .jar aqui.
+
+REQUISITOS
+- Servidor Paper/Spigot 1.20 ou superior (API compilada para 1.20.4; Java 17+)
+- SharkSMP-Economy.jar instalado e funcionando
+
+COMANDOS
+/ah                         Abre o leilao
+/ah vender <preco>          Anuncia o item na mao
+/ah meus                    Lista seus anuncios e IDs
+/ah cancelar <id>           Retira seu anuncio e devolve o item
+/ah ajuda                   Mostra ajuda
+
+INSTALACAO (depois de compilar)
+1. Compile o projeto com Maven: mvn package
+2. Pegue target/SharkSMP-Auction.jar.
+3. Coloque SharkSMP-Economy.jar e SharkSMP-Auction.jar em /plugins.
+4. Reinicie o servidor.
+5. Teste primeiro com dois jogadores e valores baixos.
+
+A integracao usa a API publica do seu SharkSMP-Economy.jar: getEconomy(), has(UUID,double), take(UUID,double) e add(UUID,double). Os anuncios ficam salvos em plugins/SharkSMP-Auction/auctions.yml.
+
+Este pacote e um primeiro projeto-fonte. Compile e teste em uma copia do servidor antes de usar no servidor principal.
